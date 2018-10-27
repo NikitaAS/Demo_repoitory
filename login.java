@@ -57,13 +57,10 @@ public class login {
 		driver.get(baseUrl);
 		driver.manage().window().maximize();
 	}*/
-	
 	@Test
 	public static void login() throws InterruptedException
 	{
-		
 		// Tell Browser to open the URL
-		
 		baseUrl = "http://e-procure.net.s3-website.ap-south-1.amazonaws.com/";
 		driver.get(baseUrl);
 		driver.manage().window().maximize();
@@ -77,21 +74,16 @@ public class login {
 		String password = Input.nextLine();
 		driver.findElement(By.xpath(".//*[@id='navbarSupportedContent']/form/div/a[1]/button/span")).click();
 		Thread.sleep(1000);
-		
 		driver.findElement(By.xpath(".//*[@id='root']/div/main/div/div[2]/div[2]/div/form/div[1]/div[1]/input")).sendKeys(domain);
 		driver.findElement(By.xpath(".//*[@id='root']/div/main/div/div[2]/div[2]/div/form/div[2]/button")).click();
 		Thread.sleep(1000);
-		
 		driver.findElement(By.xpath(".//*[@id='root']/div/main/div/div[2]/div[2]/div/form/div[1]/div[2]/input")).sendKeys(email);
-		
 		driver.findElement((By.xpath(".//*[@id='root']/div/main/div/div[2]/div[2]/div/form/div[1]/div[3]/input"))).sendKeys(password);
 		driver.findElement(By.xpath(".//*[@id='root']/div/main/div/div[2]/div[2]/div/form/div[2]/button")).click();
 		Thread.sleep(1700);
 		driver.findElement(By.xpath(".//*[@id='root']/div/main/div/div[2]/div[2]/div/form/div/div[1]/input")).sendKeys("1234");
 		driver.findElement(By.xpath(".//*[@id='root']/div/main/div/div[2]/div[2]/div/form/div/div[3]/button[1]")).click();
 		Thread.sleep(1000);
-		 
+ 
 	}
-	
-	
 }
